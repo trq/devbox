@@ -18,5 +18,10 @@
             "Trq\\DevBox\\": ["src/"]
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-develop": "1.0.x-dev"
+        }
+    },
     "bin": ["bin/devbox"]
 }
