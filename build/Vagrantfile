@@ -1,0 +1,16 @@
+VAGRANTFILE_API_VERSION = "2"
+
+build_path = "#{File.dirname(__FILE__)}"
+project_root = build_path + '/../../../../'
+
+require 'yaml'
+require build_path + '/../src/vagrant.rb'
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    if File.exists?(project_root + 'devbox.yml') then
+        puts "Found devbox.yml file - starting vagrant configuration"
+        #MyDev.configure(config, YAML::load(File.read(project_root + 'devbox.yml')))
+    else
+        puts "Unable to locate a devbox.yml file, use `devbox init` to create one."
+    end
+end
