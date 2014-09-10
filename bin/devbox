@@ -19,7 +19,9 @@
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Trq\DevBox\Command\Init;
+use Trq\DevBox\Command\Vagrant;
 
 $app = new Application('devbox', '1.0.0');
 $app->add(new Init());
+$app->add(new Vagrant());
 $app->run();
